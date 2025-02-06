@@ -1,0 +1,12 @@
+{
+  "name": "thirsty_wine_test_masters",
+  "version": "1.0.0",
+  "description": "Automation_Testing using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
