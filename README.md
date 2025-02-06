@@ -1,2 +1,2 @@
 # Thirsty_Wine_Test_Masters
-Automation_Testing useing
+Automation_Testing using Cypress
