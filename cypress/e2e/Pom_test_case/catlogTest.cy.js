@@ -1,0 +1,1 @@
+import CatlogPage from '../../page-objects/catlogPage';
