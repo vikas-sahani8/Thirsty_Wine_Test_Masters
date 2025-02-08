@@ -1,18 +1,26 @@
 class LoginPage {
-    visitURL() {
-        // Verify URL
-        cy.visit("https://pay-pal-pioneers-068.vercel.app/");
+    emailInput = () => cy.get('input[name=email]');
+    passwordInput = () => cy.get('input[name=password]');
+    loginButton = () => cy.get('button[type=submit]');
+
+    fillEmail(email) {
+        this.emailInput().clear().type(email);
     }
 
-    logIn() {
-        cy.get('.landing_page_header_icons').should('be.visible').click({ force: true });
-        // click the login button
-        cy.contains('Log In').click({ force: true });
-        // Verify Url chek
-        cy.url().should('contain', 'login');
+    fillPassword(password) {
+        this.passwordInput().clear().type(password);
     }
-    
 
+    submit() {
+        this.loginButton().click();
+    }
+
+    login(email, password) {
+        this.fillEmail(email);
+        this.fillPassword(password);
+        this.submit();
+    }
+  
 
 }
 
