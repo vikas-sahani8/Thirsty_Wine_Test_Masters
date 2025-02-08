@@ -105,7 +105,7 @@ describe('Login Page Tests', () => {
  
 
     it('should show an error for invalid email format', () => {
-        loginPage.fillEmail('sf@.com');
+        loginPage.fillEmail('vikas@gmail.com');
         loginPage.fillPassword('password123');
         loginPage.submit();
         // Add assertion for error message based on your application behavior
@@ -123,4 +123,6 @@ describe('Login Page Tests', () => {
         loginPage.submit();
          
     });
+
+   
 })
