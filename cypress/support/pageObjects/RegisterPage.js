@@ -1,15 +1,4 @@
 class RegisterPage{
-
-    // visitURL() {
-    //     // Verify URL
-    //     cy.visit("https://pay-pal-pioneers-068.vercel.app/");
-    
-    //     cy.get('[data-icon="user"]').should('be.visible').click({ force: true });
-    //     // click the login button
-    //     cy.contains('Sign Up').click({ force: true });
-    //     // Verify Url chek
-    //     cy.url().should('contain', 'register');
-    // }
     get nameInput() {
         return cy.get('input[name="name"]');
     }
