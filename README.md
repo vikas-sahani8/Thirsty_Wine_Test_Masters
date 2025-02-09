@@ -34,7 +34,7 @@ The test plan describes our approach to testing the **Thirsty Wine** website, in
 ## Test Scenarios & Test Cases
 The test scenarios cover various aspects of the **Thirsty Wine** website, ensuring that key features like **user registration, login, and password recovery** work as expected. These scenarios guide the testing process to validate both functionality and usability.
 
-📑 **Detailed Test Scenarios & Cases**: [View Here](https://docs.google.com/spreadsheets/d/1FU3tbGZGRutIObM_yj6SMiZh9k7rRl4Q1s0A_ejAHHc/edit?gid=357670088#gid=357670088)
+📑 **Detailed Test Scenarios & Cases**: [View Here](https://docs.google.com/spreadsheets/d/1FU3tbGZGRutIObM_yj6SMiZh9k7rRl4Q1s0A_ejAHHc/edit?gid=0#gid=0)
 
 ---
 
