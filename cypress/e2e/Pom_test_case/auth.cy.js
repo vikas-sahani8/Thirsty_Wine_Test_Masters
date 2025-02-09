@@ -32,11 +32,7 @@ describe('Register Page Tests', () => {
         cy.get('input[name="password"]').should('have.class', 'chakra-input css-1cjy4zv');
         cy.get('select[name="role"]').should('have.class', 'chakra-select css-161pkch');
     });
-
-    // it('should navigate to login page when login link is clicked', () => {
-    //     registerPage.loginLink.click();
-    //     cy.url().should('include', '/login');
-    // });
+    
 
     it('should check that the role select has the correct options', () => {
         registerPage.roleSelect.children().should('have.length', 2);
