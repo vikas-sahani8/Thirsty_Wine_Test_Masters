@@ -56,6 +56,12 @@ Our test plan describes our approach to testing the **Thirsty Wine** website, in
 
 ---
 
+## 🧠 Mind Map
+Visual representation of the **testing process**, showcasing interconnections of different test scenarios. 🗺️
+🧠 **Mind Map**: [View Here](https://drive.google.com/file/d/11s73sQg0LAFIF5uG-4W2tKIUrJ8jHFyc/view?usp=drive_link)
+
+---
+
 ## 🔎 Test Scenarios & Test Cases
 Ensuring that key features like **user registration, login, and password recovery** work as expected. 🎯
 📑 **Detailed Test Scenarios & Cases**: [View Here](https://docs.google.com/spreadsheets/d/1FU3tbGZGRutIObM_yj6SMiZh9k7rRl4Q1s0A_ejAHHc/edit?gid=0#gid=0)
@@ -71,12 +77,6 @@ Defects are logged with details, including **steps to reproduce, severity, and r
 ## 📊 Test Summary Report
 Provides an overview of the testing process, **what was tested, the results, and issues found**. 🚀
 📊 **Test Summary Report**: [View Here](https://drive.google.com/file/d/1v2vtIIPCh9mWy0wF7w4yge0vmYuiDmel/view?usp=drive_link)
-
----
-
-## 🧠 Mind Map
-Visual representation of the **testing process**, showcasing interconnections of different test scenarios. 🗺️
-🧠 **Mind Map**: [View Here](https://drive.google.com/file/d/11s73sQg0LAFIF5uG-4W2tKIUrJ8jHFyc/view?usp=drive_link)
 
 ---
 
