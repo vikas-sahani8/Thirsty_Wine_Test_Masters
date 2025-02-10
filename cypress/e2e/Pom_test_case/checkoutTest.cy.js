@@ -1,6 +1,8 @@
 import CheckoutPage from "../../support/pageObjects/CheckoutPage";
+import LoginPage from "../../support/pageObjects/LoginPage";
 
 const checkoutPage = new CheckoutPage();
+const loginPage = new LoginPage();
 const baseUrl = 'https://pay-pal-pioneers-068.vercel.app/';
 
 describe('Checkout Page Tests', () => {
@@ -28,7 +30,9 @@ describe('Checkout Page Tests', () => {
     it('should complete checkout as an existing customer', () => {
         checkoutPage.goToCheckout();
         checkoutPage.selectExistingCustomer();
-        checkoutPage.loginForm('vikas@gmail.com', '12345');
+        loginPage.login('vikas@gmail.com', '12345');
+        checkoutPage.goToCheckout();
+        checkoutPage.fillOutForm('Vikas', 'Sahani', '1234567890', 'vikas@gmail.com', 'Looking forward to my order!');
         checkoutPage.submitForm();
         checkoutPage.fillAddress('5678', 'Mumbai', 'Mumbai', 'Maharashtra', '400001');
         checkoutPage.proceedToPayment();
