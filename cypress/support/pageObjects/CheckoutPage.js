@@ -1,4 +1,4 @@
-class CheckoutPage{
+class CheckoutPage {
     get firstNameInput() {
         return cy.get(':nth-child(1) > .chakra-input');
     }
@@ -24,37 +24,43 @@ class CheckoutPage{
     }
 
     get existingCustomerRadio() {
-        return cy.get(':nth-child(2) > .chakra-radio__control');
+        return cy.get(':nth-child(2) > .chakra-radio__label');
     }
 
     get continueButton() {
-        return cy.get('.checkout-form > .chakra-button');
+        return cy.get('.checkout-form > .chakra-button').should('be.visible');
     }
-
 
     get errorMessage() {
         return cy.get('[data-test="error-message"]');
     }
-    addButton = '.card-container > :nth-child(1) > .product-top-section > .product-price-container > .product-cart-button';
-    addToCartButton = '.card-container > :nth-child(4) > .product-top-section > .product-price-container > .product-cart-button';
-    toastMessage = '[id^="toast-"]';
-    cartIcon = "//p[@class='landing_page_header_cart']//*[name()='svg']";
-    shoppingCartText = 'Shopping cart';
-    checkoutButton = "//button[normalize-space()='Checkout']"
 
-    addToCart(){
-        
-        cy.get(this.addButton).should('be.visible').click()
-        cy.get(this.addToCartButton).should('be.visible').click()
-        cy.get(this.toastMessage).should('be.visible').and('contain.text', 'Product added to cart')
-        
+    get toastMessage() {
+        return cy.get('[id^="toast-"]').should('be.visible');
     }
 
-    goIntoCheckout(){
-        cy.xpath(this.cartIcon).should('be.visible').click()
-        cy.contains(this.shoppingCartText).should('be.visible')
-        cy.xpath(this.checkoutButton).should('be.visible').click()
+    get cartIcon() {
+        return cy.xpath("//p[@class='landing_page_header_cart']//*[name()='svg']");
+    }
 
+    get checkoutButton() {
+        return cy.xpath("//button[normalize-space()='Checkout']");
+    }
+
+    addToCart() {
+        cy.get('.card-container > :nth-child(1) .product-cart-button')
+            .should('be.visible')
+            .click();
+        cy.get('.card-container > :nth-child(4) .product-cart-button')
+            .should('be.visible')
+            .click();
+        this.toastMessage.should('contain.text', 'Product added to cart');
+    }
+
+    goToCheckout() {
+        this.cartIcon.should('be.visible').click();
+        cy.contains('Shopping cart').should('be.visible');
+        this.checkoutButton.should('be.visible').click();
     }
 
     fillOutForm(firstName, lastName, phoneNumber, email, message) {
@@ -64,19 +70,40 @@ class CheckoutPage{
         this.emailInput.clear().type(email);
         this.messageInput.clear().type(message);
     }
-
-     
+    loginForm(email, password) {
+        cy.get("#field-\:r3\:").type(email);
+        cy.xpath("//input[@id='field-:r9:']").type(password);
+        cy.xpath("//button[normalize-space()='Login']").click();
+    }
 
     selectExistingCustomer() {
-        this.existingCustomerRadio.check();
+        this.existingCustomerRadio.click();
     }
 
     submitForm() {
         this.continueButton.click();
     }
 
-    verifySuccessMessage() {
-        this.successMessage.should('be.visible');
+    fillAddress(address, city, district, state, pincode) {
+        cy.get(':nth-child(1) > :nth-child(1) > .chakra-input').type(address);
+        cy.get(':nth-child(2) > :nth-child(1) > .chakra-input').type(city);
+        cy.get(':nth-child(2) > :nth-child(2) > .chakra-input').type(district);
+        cy.get(':nth-child(3) > :nth-child(1) > .chakra-input').type(state);
+        cy.get(':nth-child(3) > :nth-child(2) > .chakra-input').type(pincode);
+        cy.get('.checkout-form > .chakra-button').click();
+    }
+
+    proceedToPayment() {
+        cy.get('.checkout-form .chakra-button').click();
+        cy.get('[type="submit"]').click();
+    }
+
+    verifyOrderConfirmation() {
+        cy.get('.thankyou-details').should('be.visible');
+    }
+
+    continueShopping() {
+        cy.contains('Continue shopping').click({ force: true });
     }
 
     verifyErrorMessage(expectedText) {
@@ -84,4 +111,4 @@ class CheckoutPage{
     }
 }
 
-export default CheckoutPage; 
+export default CheckoutPage;
