@@ -5,12 +5,9 @@ const adminData = new AdminPage();
 const baseURL = "https://pay-pal-pioneers-068.vercel.app/";
 
 beforeEach(() => {
-    // Visiting the base URL before each test to ensure a fresh session
-    cy.visit(baseURL);
-    
-    // Logging in as an admin user with predefined credentials
+    cy.visit(baseURL );
     adminData.loginAdmin('zyz@gmail.com', '1234');
-});
+})
 
 describe('Admin Test', () => {
     
