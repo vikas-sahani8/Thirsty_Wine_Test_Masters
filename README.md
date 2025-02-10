@@ -15,29 +15,13 @@ This test plan outlines the **manual and automation testing** strategy to ensure
 
 ---
 
-## 👥 Collaborators
-
-### 🔹 Team Lead
-**Vikas Sahni**  
-🔗 [GitHub](https://github.com/vikas-sahani8)  
-🔗 [LinkedIn](https://www.linkedin.com/in/vikas-sahani-dev/)  
-📧 sahani8vikas@gmail.com  
-
-### 🔹 Team Member
-**Atul Pal**  
-🔗 [GitHub](https://github.com/palatul16)  
-🔗 [LinkedIn](https://www.linkedin.com/in/atul-pal-451b13251/)  
-📧 atulpaldelhi@gmail.com  
-
----
-
 ## 🔬 Project Type
 This project incorporates both **manual and automation testing** using **Cypress**. We leverage the **Page Object Model (POM)** to structure our Cypress automation tests, enhancing **maintainability and reusability**. 🏗️
 
 ### Our Testing Strategy Covers:
-✅ **Functionality** - Ensuring core features work correctly 🏗️
-✅ **Usability** - Checking ease of use and user experience 🎨
-✅ **Compatibility** - Validating performance across different browsers and devices 🌐
+✅ **Functionality** - Ensuring core features work correctly 🏗️ </br>
+✅ **Usability** - Checking ease of use and user experience 🎨</br>
+✅ **Compatibility** - Validating performance across different browsers and devices 🌐</br>
 
 Additionally, we implement **BDD Cucumber** to provide **clear and concise test specifications**, ensuring an efficient and effective testing process. ✅📜
 
@@ -156,4 +140,22 @@ The **Thirsty Wine** automation testing project ensures a **high-quality, seamle
 
 By combining **manual and automation testing** with **Cypress and POM**, we enhance the **efficiency, maintainability, and reliability** of our tests. 🚀✅
 
+---
+
+## 👥 Collaborators
+
+### 🔹 Team Lead
+**Vikas Sahni**  
+🔗 [GitHub](https://github.com/vikas-sahani8)  
+🔗 [LinkedIn](https://www.linkedin.com/in/vikas-sahani-dev/)  
+📧 sahani8vikas@gmail.com  
+
+### 🔹 Team Member
+**Atul Pal**  
+🔗 [GitHub](https://github.com/palatul16)  
+🔗 [LinkedIn](https://www.linkedin.com/in/atul-pal-451b13251/)  
+📧 atulpaldelhi@gmail.com  
+
 📌 **For any questions or contributions, feel free to reach out!**
+
+
