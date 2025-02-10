@@ -20,7 +20,7 @@ describe('Register Page Tests', () => {
     });
 
     it('should fill and submit the registration form', () => {
-        registerPage.fillForm('Atul', 'ashu@gmail.com', 'password123', 'User');
+        registerPage.fillForm('Atul', 'vikas@gmail.com', 'password123', 'User');
         registerPage.submit();
 
     });
@@ -58,14 +58,14 @@ describe('Register Page Tests', () => {
     });
 
     it('should allow registration with valid details in ADMIN & after it login', () => {
-        registerPage.fillForm('d', 'sg@gmail.com', 'password123', 'Admin');
+        registerPage.fillForm('Vikas', 'vikas1@gmail.com', 'password123', 'Admin');
         registerPage.submit();
         // cy.url().should('include', '/success'); // Assuming it redirects to a success page
         cy.wait(4000);
-        loginPage.fillEmail('sg@gmail.com');
+        loginPage.fillEmail('vikas1@gmail.com');
         loginPage.fillPassword('password123');
         loginPage.submit();
-        cy.get('.landing_page_header_login_dropdown_parent > div').should('contain.text', 'd');
+        cy.get('.landing_page_header_login_dropdown_parent > div').should('contain.text', 'Vikas');
         cy.get("[class='landing_page_header_login_dropdown_parent']").should('be.visible').click({ force: true });
         cy.contains('Sign out').click({ force: true });
 
@@ -101,7 +101,7 @@ describe('Login Page Tests', () => {
  
 
     it('should show an error for invalid email format', () => {
-        loginPage.fillEmail('vikas@gmail.com');
+        loginPage.fillEmail('vika@ail.com');
         loginPage.fillPassword('password123');
         loginPage.submit();
         // Add assertion for error message based on your application behavior
