@@ -24,6 +24,9 @@ class RegisterPage{
     }
 
     fillForm(name, email, password, role) {
+        cy.get('[data-icon="user"]').should('be.visible').click({ force: true });
+        cy.contains('Sign Up').click({ force: true });
+        cy.url().should('contain', 'register');
         this.nameInput.type(name);
         this.emailInput.type(email);
         this.passwordInput.type(password);
