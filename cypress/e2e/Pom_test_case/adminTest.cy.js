@@ -1,4 +1,3 @@
-
 import AdminPage from "../../support/pageObjects/AdminPage";
 
 const adminData = new AdminPage();
