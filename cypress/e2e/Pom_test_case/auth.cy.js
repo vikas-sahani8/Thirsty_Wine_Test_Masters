@@ -90,6 +90,7 @@ describe('Register Page Tests', () => {
         loginPage.submit();
         
         // Checking if the logged-in user name is displayed
+        cy.wait(4000);
         cy.get('.landing_page_header_login_dropdown_parent > div').should('contain.text', 'd');
         
         // Logging out
