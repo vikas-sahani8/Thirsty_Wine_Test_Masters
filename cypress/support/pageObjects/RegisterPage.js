@@ -31,20 +31,15 @@ class RegisterPage {
 
     // Method to fill out the registration form with provided user details
     fillForm(name, email, password, role) {
-<<<<<<< HEAD
         cy.get('[data-icon="user"]').should('be.visible').click({ force: true });
         cy.contains('Sign Up').click({ force: true });
         cy.url().should('contain', 'register');
+
+        // Fill registration form
         this.nameInput.type(name);
         this.emailInput.type(email);
         this.passwordInput.type(password);
         this.roleSelect.select(role);
-=======
-        this.nameInput.type(name); // Types the name into the input field
-        this.emailInput.type(email); // Types the email into the input field
-        this.passwordInput.type(password); // Types the password into the input field
-        this.roleSelect.select(role); // Selects the user role from the dropdown
->>>>>>> 7484a92bdeb308e458c8cce237af9202ffa2831a
     }
 
     // Method to submit the registration form
